@@ -1,0 +1,13 @@
+ABSTRACT
+========
+
+loaders.py is a set of classes/functions, to use mainly for image
+loadings/processing with pygame, it uses memoization to accelerate successive
+loadings of images, and repeating the same process on the same images, acting
+as a real cache for image loading and manipulations, it help to load tracks and
+such too.
+
+INSTALL
+=======
+
+you can simply copy the library to your application sources, or use setup.py to install it (TODO)
