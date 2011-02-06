@@ -1,2 +1,1 @@
-include README
-recursive-include pygame_loaders/loaders.py *
+include README pygame_loaders.py

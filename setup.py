@@ -3,7 +3,7 @@ from distutils.core import setup
 #This is a list of files to install, and where
 #(relative to the 'root' dir, where setup.py is)
 #You could be more specific.
-files = ["pygame_loaders/*"]
+files = ["pygame_loaders.py", "__init__.py"]
 
 setup(
         name = "pygame_loaders",
@@ -22,13 +22,13 @@ setup(
         # put them into the package directory -
         # they will be found 
         # recursively.)
-        packages = ['pygame_loaders/'],
+        packages = ['.'],
         # 'package' package must contain files (see list above)
         # I called the package 'package' thus cleverly confusing the whole
         # issue...
         # This dict maps the package name =to=> directories
         # It says, package *needs* these files.
-        package_data = {'pygame_loaders' : 'pygame_loaders/' },
+        package_data = {'pygame_loaders' : '.' },
         # 'runner' is in the root.
         scripts = [],
         long_description = """
@@ -54,7 +54,9 @@ setup(
         the loader a second time or more is basically free, thanks to
         memoization.
 
-        (assuming pygame is loaded!)
+       pygame must be loaded and display_mode set to perform most
+       image operations.
+
         >>> from pygame_loaders import image
         >>> image('myimage.png') # actual loading
         (<Surface(491x546x32 SW)>, <rect(0, 0, 491, 546)>)
@@ -68,4 +70,14 @@ setup(
 
         """,
         # This next part it for the Cheese Shop, look a little down the page.
-        classifiers = [])
+        classifiers = [
+                'Development Status :: 5 - Production/Stable',
+                'Intended Audience :: Developers',
+                'Environment :: Other Environment',
+                'License :: OSI Approved :: GNU General Public License (GPL)',
+                'Operating System :: OS Independent',
+                'Programming Language :: Python',
+                'Topic :: Software Development :: Libraries :: pygame',
+                'Topic :: Multimedia :: Graphics']
+        )
+
