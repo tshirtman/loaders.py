@@ -9,7 +9,7 @@ setup(
         name = "pygame_loaders",
         version = "1.0",
         description = """
-        a set of class/functions to use to load data in pygame
+        A set of class/functions to use to load data in pygame
         applications, do memoization by default on data and on result of
         processings it allows on those datas
         """,
